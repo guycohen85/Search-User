@@ -1,5 +1,5 @@
 <?php
-require_once $rootFolder . '/qmarkets/classes/Database.php';
+require_once $rootFolder . '/classes/Database.php';
 
 class Search
 {

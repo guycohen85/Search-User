@@ -1,6 +1,8 @@
 import './app.css';
 import { useEffect, useRef, useState } from 'react';
 
+const api = 'http://localhost/qmarkets2';
+
 function App() {
   const [input, setInput] = useState('');
   const [users, setUsers] = useState([]);
@@ -21,7 +23,7 @@ function App() {
 
     const timeoutHandler = setTimeout(() => {
       if (shouldCallApi) {
-        fetch(`http://localhost/qmarkets/?s=${input}`)
+        fetch(`${api}/?s=${input}`)
           .then((res) => res.json())
           .then(
             (result) => {

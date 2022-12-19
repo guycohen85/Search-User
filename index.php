@@ -1,6 +1,8 @@
 <?php
-$rootFolder = $_SERVER['DOCUMENT_ROOT'];
-require_once $rootFolder . '/qmarkets/classes/Search.php';
+$projectFolderName = 'qmarkets';
+
+$rootFolder = $_SERVER['DOCUMENT_ROOT'] . '/' . $projectFolderName;
+require_once $rootFolder . '/classes/Search.php';
 
 $status_code = '200';
 
@@ -20,5 +22,6 @@ if ($result instanceof PDOException) {
 
 header('Content-Type: application/json');
 header("Access-Control-Allow-Origin: *");
+header('Access-Control-Allow-Methods', 'GET, OPTIONS');
 http_response_code($status_code);
 echo json_encode($result);
