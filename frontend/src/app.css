@@ -1,0 +1,11 @@
+.App{
+	font-family: sans-serif;
+	max-width: 500px;
+	margin: 40px auto;
+	display: flex;
+	flex-direction: column;
+}
+
+input{
+	height: 40px;
+}
